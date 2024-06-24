@@ -1,0 +1,43 @@
+ dpkg-buildpackage -us -uc -ui -b
+dpkg-buildpackage: info: source package my-config-easy-rsa
+dpkg-buildpackage: info: source version 0.1-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Alexey <alex@local.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_clean
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+   dh_auto_install --destdir=debian/my-config-easy-rsa/
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'my-config-easy-rsa' in '../my-config-easy-rsa_0.1-1_all.deb'.
+ dpkg-genbuildinfo --build=binary -O../my-config-easy-rsa_0.1-1_amd64.buildinfo
+ dpkg-genchanges --build=binary -O../my-config-easy-rsa_0.1-1_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian my-config-easy-rsa_0.1-1_amd64.changes ...
+E: my-config-easy-rsa: copyright-contains-dh_make-todo-boilerplate
+E: my-config-easy-rsa: helper-templates-in-copyright
+W: my-config-easy-rsa: copyright-has-url-from-dh_make-boilerplate
+W: my-config-easy-rsa: description-synopsis-starts-with-article
+W: my-config-easy-rsa: initial-upload-closes-no-bugs [usr/share/doc/my-config-easy-rsa/changelog.Debian.gz:1]
+Finished running lintian.

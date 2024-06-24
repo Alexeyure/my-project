@@ -1,0 +1,19 @@
+Source: my-config-easy-rsa
+Section: utils
+Priority: optional
+Maintainer: Alexey <alex@local.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.0
+Homepage: https://github.com/OpenVPN/easy-rsa
+#Vcs-Browser: https://salsa.debian.org/debian/my-config-easy-rsa
+#Vcs-Git: https://salsa.debian.org/debian/my-config-easy-rsa.git
+
+Package: my-config-easy-rsa
+Architecture: all
+Multi-Arch: foreign
+Depends: easy-rsa
+ ${misc:Depends},
+Description: The package includes a working configuration file vars
+ <Insert long description, indented with spaces.>

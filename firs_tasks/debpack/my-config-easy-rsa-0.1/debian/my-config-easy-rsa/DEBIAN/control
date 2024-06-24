@@ -1,0 +1,12 @@
+Package: my-config-easy-rsa
+Version: 0.1-1
+Architecture: all
+Maintainer: Alexey <alex@local.com>
+Installed-Size: 31
+Depends: easy-rsa
+Section: utils
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://github.com/OpenVPN/easy-rsa
+Description: The package includes a working configuration file vars
+ <Insert long description, indented with spaces.>

@@ -1,0 +1,2 @@
+my-config-vars /usr/share/easy-rsa/vars 
+vars.example /usr/share/easy-rsa/vars.example

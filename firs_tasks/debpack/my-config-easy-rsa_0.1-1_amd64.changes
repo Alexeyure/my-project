@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Mon, 24 Jun 2024 10:02:43 +0000
+Source: my-config-easy-rsa
+Binary: my-config-easy-rsa
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Alexey <alex@local.com>
+Changed-By: Alexey <alex@local.com>
+Description:
+ my-config-easy-rsa - The package includes a working configuration file vars
+Changes:
+ my-config-easy-rsa (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release
+Checksums-Sha1:
+ d6815fcbc18fc66486c152379302bfc37510854d 6132 my-config-easy-rsa_0.1-1_all.deb
+ 13b03b95ba51e840382acdb0b088bf99f1e94c07 5802 my-config-easy-rsa_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 702fcfb6ee0e1988e1a2116dac4b8f2895cd8a26eb67bab1bb9e0a05bd1d0ba3 6132 my-config-easy-rsa_0.1-1_all.deb
+ eb973a881aae64c29a08d2110c8415f301c30bf03ba5be1a2d3ebed3214be036 5802 my-config-easy-rsa_0.1-1_amd64.buildinfo
+Files:
+ ed9a228f5f62aa64dd8c658851fe2cd0 6132 utils optional my-config-easy-rsa_0.1-1_all.deb
+ 0ebc1655f5f6b492eb6c01ccbf42010f 5802 utils optional my-config-easy-rsa_0.1-1_amd64.buildinfo

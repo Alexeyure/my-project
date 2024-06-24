@@ -69,7 +69,7 @@ EOF
 
 # Добавляем новые параметры в файл vars
 cat options >> ~/easy-rsa/vars
-echo "Новые параметры EASYRSA_ALGO и EASYRSA_DIGEST успешно добавлены в файл vars"
+echo "Новые параметры успешно добавлены в файл vars"
 
 # Создаем центр сертификации
 ./easyrsa build-ca
@@ -78,5 +78,5 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Скрипт выполнен успешно"
+echo "Центр сертификации успешно создан"
 

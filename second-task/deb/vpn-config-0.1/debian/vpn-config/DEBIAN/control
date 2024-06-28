@@ -1,0 +1,12 @@
+Package: vpn-config
+Version: 0.1-1
+Architecture: all
+Maintainer: Alexey <ubuntu@example>
+Installed-Size: 38
+Depends: eaasy-rsa
+Section: utils
+Priority: optional
+Multi-Arch: foreign
+Homepage: http://github.com/OpenVPN
+Description: <insert up to 60 chars description>
+ <Insert long description, indented with spaces.>

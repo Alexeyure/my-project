@@ -1,0 +1,5 @@
+iptables.sh /home/alex
+base.conf ~/clients
+make_config.sh ~/clients
+server.conf /etc/openvpn/server
+sysctl.conf /etc/sysctl.conf

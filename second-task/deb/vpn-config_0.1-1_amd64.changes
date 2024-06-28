@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Fri, 28 Jun 2024 08:24:33 +0000
+Source: vpn-config
+Binary: vpn-config
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Alexey <ubuntu@example>
+Changed-By: Alexey <alex@local>
+Description:
+ vpn-config - <insert up to 60 chars description>
+Changes:
+ vpn-config (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release
+Checksums-Sha1:
+ e5cec7b8477d8f631b4633f92695d3c7650babfc 8808 vpn-config_0.1-1_all.deb
+ c2e23f154355e8cd11f08195b938ffee167cb4de 5762 vpn-config_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ e4583752ecf04d6e5d59cf563637eb7a2e8810f791e09b3a81c4c059d7dd6cdf 8808 vpn-config_0.1-1_all.deb
+ 3b4b04c9dc1baa466db1538b157c64959f9f552a05ce3ced1144d83b22baad36 5762 vpn-config_0.1-1_amd64.buildinfo
+Files:
+ 68b8da6c57c3c10a9df8f5c1113c1d09 8808 utils optional vpn-config_0.1-1_all.deb
+ 8f2e6a7082384c5e992d6d7700d2d97e 5762 utils optional vpn-config_0.1-1_amd64.buildinfo

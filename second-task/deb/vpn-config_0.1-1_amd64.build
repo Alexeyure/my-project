@@ -1,0 +1,53 @@
+ dpkg-buildpackage -us -uc -ui -b
+dpkg-buildpackage: info: source package vpn-config
+dpkg-buildpackage: info: source version 0.1-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Alexey <alex@local>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_clean
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+   dh_auto_install --destdir=debian/vpn-config/
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'vpn-config' in '../vpn-config_0.1-1_all.deb'.
+ dpkg-genbuildinfo --build=binary -O../vpn-config_0.1-1_amd64.buildinfo
+ dpkg-genchanges --build=binary -O../vpn-config_0.1-1_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian vpn-config_0.1-1_amd64.changes ...
+E: vpn-config: bogus-mail-host Maintainer ubuntu@example
+E: vpn-config changes: bogus-mail-host Changed-By alex@local
+E: vpn-config changes: bogus-mail-host Maintainer ubuntu@example
+E: vpn-config: bogus-mail-host-in-debian-changelog alex@local (for version 0.1-1) [usr/share/doc/vpn-config/changelog.Debian.gz:1]
+E: vpn-config: copyright-contains-dh_make-todo-boilerplate
+E: vpn-config: description-is-dh_make-template
+E: vpn-config: dir-or-file-in-home [home/alex/]
+E: vpn-config: dir-or-file-in-home [home/alex/iptables.sh]
+E: vpn-config: helper-templates-in-copyright
+E: vpn-config: non-standard-toplevel-dir [~/]
+W: vpn-config: copyright-has-url-from-dh_make-boilerplate
+W: vpn-config: executable-not-elf-or-script [home/alex/iptables.sh]
+W: vpn-config: file-in-unusual-dir [~/clients/base.conf]
+W: vpn-config: file-in-unusual-dir [~/clients/make_config.sh]
+W: vpn-config: initial-upload-closes-no-bugs [usr/share/doc/vpn-config/changelog.Debian.gz:1]
+Finished running lintian.

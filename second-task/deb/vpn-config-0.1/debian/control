@@ -1,0 +1,20 @@
+Source: vpn-config
+Section: utils
+Priority: optional
+Maintainer: Alexey <ubuntu@example>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.0
+Homepage: http://github.com/OpenVPN
+#Vcs-Browser: https://salsa.debian.org/debian/vpn-config
+#Vcs-Git: https://salsa.debian.org/debian/vpn-config.git
+
+Package: vpn-config
+Architecture: all
+Multi-Arch: foreign
+Depends: eaasy-rsa
+ ${misc:Depends},
+Description: <insert up to 60 chars description>
+ <Insert long description, indented with spaces.>
+

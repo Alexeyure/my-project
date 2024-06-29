@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Sat, 29 Jun 2024 11:00:03 +0000
+Source: my-node-exporter-conf
+Binary: my-node-exporter-conf
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Alexey <ubuntu@unknown>
+Changed-By: Alexey <ubuntu@unknown>
+Description:
+ my-node-exporter-conf - <insert up to 60 chars description>
+Changes:
+ my-node-exporter-conf (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release. (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ c19a31bf0cf17c5c55d8e011f9e46009e1f33381 2700 my-node-exporter-conf_0.1-1_all.deb
+ f3a9b2c74aa86ef66b972188a4be0d53d56cef71 5817 my-node-exporter-conf_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 10fdebca08f3889bc8d6db6d37d9182c305896cddde7eb89d84f5d8e6de24410 2700 my-node-exporter-conf_0.1-1_all.deb
+ 943c2bb51228544c65409f7785ad331d8458289001db54898737a9803088ffed 5817 my-node-exporter-conf_0.1-1_amd64.buildinfo
+Files:
+ c8b40c7eb137f8de48c9e9c3202e7048 2700 utils optional my-node-exporter-conf_0.1-1_all.deb
+ 421c0c5d4533bb6aa077af91dec9e0b3 5817 utils optional my-node-exporter-conf_0.1-1_amd64.buildinfo

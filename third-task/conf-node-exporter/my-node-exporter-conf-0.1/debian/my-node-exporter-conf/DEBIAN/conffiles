@@ -1,0 +1,2 @@
+/etc/default/prometheus-node-exporter/prometheus-node-exporter
+/etc/node_exporter/node_exporter/node-exporter.yml

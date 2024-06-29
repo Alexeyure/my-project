@@ -1,0 +1,3 @@
+my-alertmanager.yml /etc/prometheus/alertmanager.yml
+my-prometheus.yml /etc/prometheus/prometheus.yml
+

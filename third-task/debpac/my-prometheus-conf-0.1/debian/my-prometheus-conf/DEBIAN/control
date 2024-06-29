@@ -1,0 +1,11 @@
+Package: my-prometheus-conf
+Version: 0.1-1
+Architecture: all
+Maintainer: Alexey <alex@unknown>
+Installed-Size: 17
+Section: utils
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://ginhub.com
+Description: <insert up to 60 chars description>
+ <Insert long description, indented with spaces.>

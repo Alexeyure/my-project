@@ -1,0 +1,49 @@
+ dpkg-buildpackage -us -uc -ui -b
+dpkg-buildpackage: инфо: пакет исходного кода my-prometheus-conf
+dpkg-buildpackage: инфо: версия исходного кода 0.1-1
+dpkg-buildpackage: инфо: дистрибутив исходного кода UNRELEASED
+dpkg-buildpackage: инфо: исходный код изменён Alexey <alex@unknown>
+ dpkg-source --before-build .
+dpkg-buildpackage: инфо: архитектура узла amd64
+ debian/rules clean
+dh clean
+   dh_clean
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+   dh_auto_install --destdir=debian/my-prometheus-conf/
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: сборка пакета «my-prometheus-conf» в «../my-prometheus-conf_0.1-1_all.deb».
+ dpkg-genbuildinfo --build=binary -O../my-prometheus-conf_0.1-1_amd64.buildinfo
+ dpkg-genchanges --build=binary -O../my-prometheus-conf_0.1-1_amd64.changes
+dpkg-genchanges: инфо: закачка только двоичных пакетов (без пакетов исходного кода)
+ dpkg-source --after-build .
+dpkg-buildpackage: инфо: закачка только двоичных пакетов (без пакетов исходного кода)
+Now running lintian my-prometheus-conf_0.1-1_amd64.changes ...
+E: my-prometheus-conf: bogus-mail-host Maintainer alex@unknown
+E: my-prometheus-conf changes: bogus-mail-host Changed-By alex@unknown
+E: my-prometheus-conf changes: bogus-mail-host Maintainer alex@unknown
+E: my-prometheus-conf: bogus-mail-host-in-debian-changelog alex@unknown (for version 0.1-1) [usr/share/doc/my-prometheus-conf/changelog.Debian.gz:1]
+E: my-prometheus-conf: changelog-is-dh_make-template [usr/share/doc/my-prometheus-conf/changelog.Debian.gz:1]
+E: my-prometheus-conf: copyright-contains-dh_make-todo-boilerplate
+E: my-prometheus-conf: description-is-dh_make-template
+E: my-prometheus-conf: helper-templates-in-copyright
+W: my-prometheus-conf: copyright-has-url-from-dh_make-boilerplate
+W: my-prometheus-conf: initial-upload-closes-no-bugs [usr/share/doc/my-prometheus-conf/changelog.Debian.gz:1]
+W: my-prometheus-conf: wrong-bug-number-in-closes #nnnn [usr/share/doc/my-prometheus-conf/changelog.Debian.gz:3]
+Finished running lintian.

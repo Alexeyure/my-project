@@ -1,0 +1,20 @@
+global:
+  resolve_timeout: 1m
+  smtp_require_tls: true
+
+route:
+  receiver: 'mail'
+  group_by: [ alertname ]
+
+receivers:
+  - name: 'mail'
+    email_configs:
+      - to: 'examle@gmail.com'
+        from: 'example@gmail.com'
+        smarthost: smtp.gmail.com:587
+        auth_username: 'example@gmail.com'
+        auth_identity: 'example@gmail.com'
+        auth_password: 'acess code'
+        send_resolved: true
+        tls_config:
+          insecure_skip_verify: true

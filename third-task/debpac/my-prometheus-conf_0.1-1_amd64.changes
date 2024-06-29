@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Sat, 29 Jun 2024 13:28:47 +0300
+Source: my-prometheus-conf
+Binary: my-prometheus-conf
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Alexey <alex@unknown>
+Changed-By: Alexey <alex@unknown>
+Description:
+ my-prometheus-conf - <insert up to 60 chars description>
+Changes:
+ my-prometheus-conf (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release. (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ afbb3f8b69fbb294f898c133bd3c0c323ff1f462 3094 my-prometheus-conf_0.1-1_all.deb
+ 56e6a57827018b0b4a545718c8688945ed811a93 5667 my-prometheus-conf_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 4203ff2eaea14f80c613f7e2f69aad6ccda3c4092d022dd28d0cda26122728b0 3094 my-prometheus-conf_0.1-1_all.deb
+ cf8425699aad8e607d23ecd618dbcf6074de3abc5714314fa82250b7cac6b89e 5667 my-prometheus-conf_0.1-1_amd64.buildinfo
+Files:
+ 1f3b4ae6b13aae9d1e6c5ba4fc10e4ae 3094 utils optional my-prometheus-conf_0.1-1_all.deb
+ 4a63713500475196c12dde5c1dde24cc 5667 utils optional my-prometheus-conf_0.1-1_amd64.buildinfo

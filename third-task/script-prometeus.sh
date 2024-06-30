@@ -4,6 +4,11 @@ USER="name"    # Имя пользователя для SSH подключени
 HOST="ip"      # IP-адрес для SSH подключения к серверу OpenVPN
 
 
+# Устанавливаем и сохраняем необходимые права
+sudo apt-get install iptables-persistent
+iptables -A INPUT -p tcp --dport 9090 -j ACCEPT
+sudo netfilter-persistent save   
+
 # СоздаЁм функцию для обработки ошибок
 check_error() {
     if [ $? -ne 0 ]; then
@@ -25,6 +30,10 @@ sudo dpkg -i my-prometheus-conf_0.1-1_all.deb
 
 # Подключение к серверу с OpenVPN для настройки node-exporter
 ssh $USER@$HOST -p 22 
+sudo apt-get update
+sudo apt-get install prometheus-node-exporter
+
+
 # Создание каталога для Node Exporter
 sudo mkdir -p /etc/node_exporter
 if [ $? -ne 0 ]; then

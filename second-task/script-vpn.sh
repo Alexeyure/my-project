@@ -5,6 +5,8 @@ USER="name_rsa_server"             # Имя пользователя для SSH 
 HOST="ip_rsa_server"               # IP-адрес для SSH подключения к серверу с easy-rsa
 SERVER_ADDRESS="ip_vpn_server"     # IP-адрес для передачи файлов на OpenVPN сервер
 REMOTE_USER="name_vpn_server"      # Имя пользователя для передачи файлов на OpenVPN сервер
+CLIENT="name_client_server"        # Имя пользователя клиента для передачи ему конфигурационного файла
+CLIENT_ADDRESS="ip_client"         # IP-адрес клиента для передачи ему конфигурационного файла 
 TIMEOUT=10         # Тайм-аут подключения в секундах
 
 
@@ -157,7 +159,7 @@ fi
 echo "Настройка OpenVPN сервера и клиентов завершена успешно."
 
 
-scp ~/clients/files/client-1.ovpn user@ip:~/ 
+scp ~/clients/files/client-1.ovpn $CLIENT@$CLIENT_ADDRESS:~/ 
 
 
  
